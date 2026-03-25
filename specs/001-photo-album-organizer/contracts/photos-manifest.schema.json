@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://albumy.local/contracts/photos-manifest.schema.json",
+  "title": "Photos Manifest",
+  "type": "object",
+  "required": ["albums", "photos"],
+  "properties": {
+    "albums": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "date", "sortOrder"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "title": { "type": "string", "minLength": 1, "maxLength": 80 },
+          "date": { "type": "string", "format": "date" },
+          "sortOrder": { "type": "integer", "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    },
+    "photos": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "albumId", "src", "sortOrder"],
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "albumId": { "type": "string", "minLength": 1 },
+          "src": { "type": "string", "minLength": 1 },
+          "thumbnailSrc": { "type": "string" },
+          "caption": { "type": "string", "maxLength": 140 },
+          "sortOrder": { "type": "integer", "minimum": 0 }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

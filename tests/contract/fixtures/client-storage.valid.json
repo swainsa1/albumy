@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "photosBasePath": "/photos",
+  "albumOrder": ["album-1", "album-2"],
+  "updatedAt": "2026-03-24T00:00:00.000Z"
+}

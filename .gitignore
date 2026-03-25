@@ -1,0 +1,13 @@
+node_modules/
+dist/
+build/
+coverage/
+playwright-report/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+.env*
+.vscode/
+.idea/

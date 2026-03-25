@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] Code quality gate defined: linting, formatting, and static analysis checks are listed with pass criteria.
+- [ ] Testing gate defined: unit tests plus integration/contract tests are identified for each behavior change.
+- [ ] UX consistency gate defined: shared patterns, states (loading/empty/success/error), and accessibility checks are specified.
+- [ ] Performance gate defined: measurable budgets, measurement method, and regression thresholds are documented.
+- [ ] Exception handling defined: any temporary waiver includes owner, expiry, and mitigation plan.
 
 ## Project Structure
 

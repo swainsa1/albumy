@@ -1,0 +1,73 @@
+{
+  "albums": [
+    {
+      "id": "a-2026-03-20-roadtrip",
+      "title": "Roadtrip",
+      "date": "2026-03-20",
+      "sortOrder": 0
+    },
+    {
+      "id": "a-2026-03-18-citywalk",
+      "title": "City Walk",
+      "date": "2026-03-18",
+      "sortOrder": 1
+    },
+    {
+      "id": "a-2026-03-18-cafe",
+      "title": "Retro Cafe",
+      "date": "2026-03-18",
+      "sortOrder": 2
+    }
+  ],
+  "photos": [
+    {
+      "id": "p-roadtrip-1",
+      "albumId": "a-2026-03-20-roadtrip",
+      "src": "safe.jpg",
+      "caption": "Open highway",
+      "sortOrder": 0
+    },
+    {
+      "id": "p-roadtrip-2",
+      "albumId": "a-2026-03-20-roadtrip",
+      "src": "scea.jpg",
+      "caption": "Sunset turn",
+      "sortOrder": 1
+    },
+    {
+      "id": "p-roadtrip-3",
+      "albumId": "a-2026-03-20-roadtrip",
+      "src": "scm.png",
+      "caption": "Desert overlook",
+      "sortOrder": 2
+    },
+    {
+      "id": "p-citywalk-1",
+      "albumId": "a-2026-03-18-citywalk",
+      "src": "demo-citywalk-1.jpg",
+      "caption": "Neon corner",
+      "sortOrder": 0
+    },
+    {
+      "id": "p-citywalk-2",
+      "albumId": "a-2026-03-18-citywalk",
+      "src": "unsupported-note.txt",
+      "caption": "Should warn",
+      "sortOrder": 1
+    },
+    {
+      "id": "p-cafe-1",
+      "albumId": "a-2026-03-18-cafe",
+      "src": "demo-cafe-1.jpg",
+      "caption": "Retro menu board",
+      "sortOrder": 0
+    },
+    {
+      "id": "p-cafe-2",
+      "albumId": "a-2026-03-18-cafe",
+      "src": "demo-cafe-2.png",
+      "caption": "Counter lights",
+      "sortOrder": 1
+    }
+  ]
+}

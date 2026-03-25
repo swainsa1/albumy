@@ -1,50 +1,79 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+- Version change: N/A -> 1.0.0
+- Modified principles:
+	- PRINCIPLE_1_NAME -> I. Code Quality Is Non-Negotiable
+	- PRINCIPLE_2_NAME -> II. Test Coverage Defines Done
+	- PRINCIPLE_3_NAME -> III. User Experience Must Be Consistent
+	- PRINCIPLE_4_NAME -> IV. Performance Budgets Are Required
+- Added sections:
+	- Engineering Quality Gates
+	- Delivery Workflow Expectations
+- Removed sections:
+	- PRINCIPLE_5_NAME placeholder section
+- Templates requiring updates:
+	- ✅ updated: .specify/templates/plan-template.md
+	- ✅ updated: .specify/templates/spec-template.md
+	- ✅ updated: .specify/templates/tasks-template.md
+	- ⚠ pending: .specify/templates/commands/*.md (directory not present in repository)
+- Follow-up TODOs:
+	- None
+-->
+
+# Albumy Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Code Quality Is Non-Negotiable
+All production code MUST pass formatting, linting, and static analysis checks in CI before merge.
+Changes MUST preserve readability through clear naming, small focused units, and removal of dead code.
+Public interfaces MUST include concise usage documentation. Rationale: maintainability and safe iteration
+depend on enforceable quality gates, not reviewer preference.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Test Coverage Defines Done
+Every behavior change MUST include automated tests that fail before implementation and pass after it.
+Bug fixes MUST include a regression test. Feature work MUST include unit tests plus integration or contract
+tests where components interact. Merges with failing tests are prohibited. Rationale: reliable delivery
+requires objective verification of behavior and prevention of regressions.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. User Experience Must Be Consistent
+User-facing changes MUST reuse established design patterns for layout, interaction, feedback, and copy tone.
+Every flow MUST provide consistent loading, empty, success, and error states. Accessibility checks for
+keyboard navigation, contrast, and semantic labeling MUST be included in review. Rationale: consistency
+reduces user error, support load, and re-learning cost.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Performance Budgets Are Required
+Each feature MUST declare measurable performance budgets in its specification (for example response time,
+render latency, memory usage, or bundle size as applicable). Implementations MUST include evidence that
+budgets are met and MUST not regress critical-path performance without explicit approval and mitigation.
+Rationale: performance is a user-facing quality attribute and must be managed as a first-class constraint.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+## Engineering Quality Gates
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+- Pull requests MUST include: linked specification, updated tests, and evidence of quality checks.
+- Pull requests touching user-facing behavior MUST include UX consistency review notes.
+- Pull requests affecting critical paths MUST include before/after performance measurements.
+- Any temporary exception MUST document owner, scope, expiration date, and rollback plan.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+## Delivery Workflow Expectations
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- Work MUST follow spec -> plan -> tasks before implementation begins.
+- The plan MUST pass Constitution Check gates before Phase 0 research completion.
+- Task breakdowns MUST keep user stories independently deliverable and testable.
+- Release notes MUST summarize user-visible changes, test coverage updates, and performance impact.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution is authoritative for engineering practices in this repository. Amendments require a pull
+request that includes: proposed text changes, impact assessment on templates and workflows, and approval
+from at least one project maintainer.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+Versioning policy for this constitution follows semantic versioning:
+- MAJOR: incompatible governance or principle removals/redefinitions.
+- MINOR: new principle/section or materially expanded guidance.
+- PATCH: clarifications, wording improvements, and non-semantic edits.
+
+Compliance review is required at planning and pull request time. Reviewers MUST block changes that violate
+any MUST requirement unless a documented exception is approved per Engineering Quality Gates.
+
+**Version**: 1.0.0 | **Ratified**: 2026-03-24 | **Last Amended**: 2026-03-24

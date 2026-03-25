@@ -1,0 +1,18 @@
+{
+  "albums": [
+    {
+      "id": "album-1",
+      "title": "",
+      "date": "not-a-date",
+      "sortOrder": -1
+    }
+  ],
+  "photos": [
+    {
+      "id": "photo-1",
+      "albumId": "",
+      "src": "",
+      "sortOrder": -2
+    }
+  ]
+}

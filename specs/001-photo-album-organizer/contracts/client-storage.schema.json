@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://albumy.local/contracts/client-storage.schema.json",
+  "title": "Client Storage Payload",
+  "type": "object",
+  "required": ["version", "photosBasePath", "albumOrder"],
+  "properties": {
+    "version": { "type": "integer", "minimum": 1 },
+    "photosBasePath": {
+      "type": "string",
+      "pattern": "^(\\/|\\./)(?!.*\\.\\.).+"
+    },
+    "albumOrder": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

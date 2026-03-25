@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About · Albumy</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Albumy</h1>
+      <nav aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Albums</a>
+        <a class="nav-link" href="about.html" aria-current="page">About</a>
+      </nav>
+    </header>
+
+    <main class="layout about-layout">
+      <section class="panel panel-wide" aria-labelledby="about-title">
+        <h2 id="about-title">About Albumy</h2>
+        <p>
+          Albumy is a minimal photo organizer for static hosting. It helps you keep albums grouped by date,
+          reorder them quickly, and preview photos in clean tiles.
+        </p>
+        <h3>Why this style?</h3>
+        <p>
+          The interface uses a sleek-retro theme: dark surfaces, bright amber/cyan accents, and bold focus states.
+          It is designed to feel nostalgic while staying readable and accessible.
+        </p>
+        <h3>How it works</h3>
+        <ul>
+          <li>Photos are loaded from a configured same-origin path (default <strong>/photos</strong>).</li>
+          <li>Album and photo metadata are read from <strong>manifest.json</strong>.</li>
+          <li>Album reordering is persisted in browser localStorage.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+  </body>
+</html>

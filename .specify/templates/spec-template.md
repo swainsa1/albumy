@@ -95,6 +95,15 @@
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
+### Quality, Testing, UX, and Performance Requirements *(mandatory)*
+
+- **QTP-001 (Code Quality)**: Implementation MUST define linting/formatting/static analysis checks required for merge.
+- **QTP-002 (Testing)**: Every behavior change MUST map to required automated tests (unit + integration/contract as applicable).
+- **QTP-003 (UX Consistency)**: User-facing work MUST specify applicable design patterns and required loading/empty/success/error states.
+- **QTP-004 (Accessibility)**: User-facing work MUST define accessibility expectations (keyboard, contrast, semantic labels).
+- **QTP-005 (Performance)**: Feature MUST define measurable performance budgets and how compliance will be measured.
+- **QTP-006 (Regression Policy)**: Feature MUST define acceptable regression threshold or explicit approval requirements.
+
 ### Key Entities *(include if feature involves data)*
 
 - **[Entity 1]**: [What it represents, key attributes without implementation]
